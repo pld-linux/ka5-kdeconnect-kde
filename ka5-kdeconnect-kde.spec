@@ -8,7 +8,7 @@
 Summary:	KDE Connect - desktop app
 Name:		ka5-%{kaname}
 Version:	23.08.2
-Release:	1
+Release:	2
 License:	BSD 3 Clause/GPL v2/GPL v3
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -107,6 +107,8 @@ ctest --test-dir build
 rm -rf $RPM_BUILD_ROOT
 %ninja_install -C build
 
+# not supported by glibc yet
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/ie
 %find_lang %{kaname} --all-name --with-kde
 
 %clean
@@ -181,8 +183,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/org.kde.kdeconnect.handler.desktop
 %{_desktopdir}/org.kde.kdeconnect.nonplasma.desktop
 %{_desktopdir}/org.kde.kdeconnect.sms.desktop
+%dir %{_datadir}/contractor
 %{_datadir}/contractor/kdeconnect.contract
 %{_datadir}/dbus-1/services/org.kde.kdeconnect.service
+%dir %{_datadir}/deepin
+%dir %{_datadir}/deepin/dde-file-manager
+%dir %{_datadir}/deepin/dde-file-manager/oem-menuextensions
 %{_datadir}/deepin/dde-file-manager/oem-menuextensions/kdeconnect-dde.desktop
 %{_iconsdir}/hicolor/16x16/status/laptopconnected.svg
 %{_iconsdir}/hicolor/16x16/status/laptopdisconnected.svg
