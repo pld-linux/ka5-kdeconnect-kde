@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	23.08.2
+%define		kdeappsver	23.08.3
 %define		kframever	5.101.0
 %define		qtver		5.15.2
 %define		kaname		kdeconnect-kde
 Summary:	KDE Connect - desktop app
 Name:		ka5-%{kaname}
-Version:	23.08.2
-Release:	2
+Version:	23.08.3
+Release:	1
 License:	BSD 3 Clause/GPL v2/GPL v3
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	b4106eea1737ea4d6ca1af07555e76b1
+# Source0-md5:	5e29b775b0879589954cfab3f71a01b2
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= 5.15.2
 BuildRequires:	Qt5DBus-devel >= 5.15.2
