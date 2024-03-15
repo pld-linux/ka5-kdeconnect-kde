@@ -8,7 +8,7 @@
 Summary:	KDE Connect - desktop app
 Name:		ka5-%{kaname}
 Version:	24.01.95
-Release:	0.2
+Release:	0.1
 License:	BSD 3 Clause/GPL v2/GPL v3
 Group:		X11/Libraries
 Source0:	https://download.kde.org/unstable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -49,11 +49,11 @@ BuildRequires:	kf6-kservice-devel >= 5.101.0
 BuildRequires:	kf6-kwidgetsaddons-devel >= %{kframever}
 BuildRequires:	kf6-kwindowsystem-devel >= 5.101.0
 BuildRequires:	kf6-modemmanager-qt-devel >= 5.101.0
-BuildRequires:	kf6-pulseaudio-qt-devel >= 1.4.0
 BuildRequires:	kf6-qqc2-desktop-style-devel >= 5.101.0
 BuildRequires:	kf6-solid-devel >= 5.101.0
 BuildRequires:	libfakekey-devel
 BuildRequires:	ninja
+BuildRequires:	pulseaudio-qt-devel >= 1.4.0
 BuildRequires:	qca-qt6-devel >= 2.1.0
 BuildRequires:	qt6-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
